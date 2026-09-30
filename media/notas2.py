@@ -3,9 +3,9 @@ import tkinter as tk
 
 def calcular_media_janela():
     """Calcula a média das notas inseridas na janela."""
-    nota1 = float(nota1_entry.get())
-    nota2 = float(nota2_entry.get())
-    nota3 = float(nota3_entry.get())
+    nota1 = float(nota1_spinbox.get())
+    nota2 = float(nota2_spinbox.get())
+    nota3 = float(nota3_spinbox.get())
     media = (nota1 + nota2 + nota3) / 3
     result_label.config(text=f"A média das notas é: {media:.2f}")
 
@@ -17,18 +17,18 @@ label.grid(row=0, column=0, padx=10, pady=10)
 
 nota1_label = tk.Label(janela, text="Nota 1:")
 nota1_label.grid(row=1, column=0, padx=10, pady=10)
-nota1_entry = tk.Entry(janela)
-nota1_entry.grid(row=1, column=1, padx=10, pady=10)
+nota1_spinbox = tk.Spinbox(janela, from_=0, to=10, increment=0.1)
+nota1_spinbox.grid(row=1, column=1, padx=10, pady=10)
 
 nota2_label = tk.Label(janela, text="Nota 2:")
 nota2_label.grid(row=2, column=0, padx=10, pady=10)
-nota2_entry = tk.Entry(janela)
-nota2_entry.grid(row=2, column=1, padx=10, pady=10)
+nota2_spinbox = tk.Spinbox(janela, from_=0, to=10, increment=0.1)
+nota2_spinbox.grid(row=2, column=1, padx=10, pady=10)
 
 nota3_label = tk.Label(janela, text="Nota 3:")
 nota3_label.grid(row=3, column=0, padx=10, pady=10)
-nota3_entry = tk.Entry(janela)
-nota3_entry.grid(row=3, column=1, padx=10, pady=10)
+nota3_spinbox = tk.Spinbox(janela, from_=0, to=10, increment=0.1)
+nota3_spinbox.grid(row=3, column=1, padx=10, pady=10)
 
 button = tk.Button(janela, text="Calcular Média", command=lambda: calcular_media_janela())
 button.grid(row=4, column=0, columnspan=2, padx=10, pady=10)
