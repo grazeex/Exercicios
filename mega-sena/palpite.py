@@ -1,7 +1,6 @@
 import random
 import tkinter as tk
 
-
 ## Faz a jenela aparecer no centro da tela
 # Obtém as dimensões da tela do usuário
 largura = 500
@@ -22,6 +21,8 @@ janela.geometry(f"{largura}x{altura}+{pos_x}+{pos_y}")
 def gerar_palpite():
     numero = random.sample(range(1, 61), 6)
     resultado_label.config(text=f"Palpite da Mega-Sena: {sorted(numero)}")
+
+
 janela.title("Palpite da Mega-Sena")
 
 label = tk.Label(janela, text="Clique no botão para gerar um palpite da Mega-Sena")
